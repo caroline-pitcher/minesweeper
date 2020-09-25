@@ -77,14 +77,14 @@ var board = {
   }, { 
     row: 3,
     col: 0,
-    isMine: false,
-    isMarked: false,
+    isMine: true,
+    isMarked: true,
     hidden: true 
   }, { 
     row: 3,
     col: 1,
-    isMine: true,
-    isMarked: true,
+    isMine: false,
+    isMarked: false,
     hidden: true 
   }, { 
     row: 3,
