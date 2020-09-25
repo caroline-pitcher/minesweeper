@@ -106,7 +106,8 @@ function startGame () {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])
   }
   document.addEventListener('click', checkForWin)
-  document.addEventListener("contextmenu", checkForWin)
+  document.addEventListener('contextmenu', checkForWin)
+  document.addEventListener('mine', raspberrySound)
   lib.initBoard()
 }
 
@@ -130,9 +131,13 @@ function checkForWin () {
   if (incorrect.length > 0) {
       return
     }
-  lib.displayMessage('You win!')
+  lib.displayMessage('Winner!')
 }
 
+function raspberrySound () {
+  var audio = document.getElementsByTagName("audio")[0];
+  audio.play();
+}
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
 // cells yourself! Just use `lib.getSurroundingCells`: 
