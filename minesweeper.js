@@ -135,7 +135,7 @@ function checkForWin () {
 }
 
 function raspberrySound () {
-  let audioRaspberry = new Audio('file:///Users/Caz/dev-academy/foundations/minesweeper/raspberry.wav');
+  let audioRaspberry = new Audio('file:///Users/Caz/dev-academy/foundations/minesweeper/raspberry.mp3');
   audioRaspberry.play();
 }
 // Define this function to count the number of mines around the cell
