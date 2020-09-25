@@ -107,6 +107,7 @@ function startGame () {
   }
   document.addEventListener('click', checkForWin)
   document.addEventListener('contextmenu', checkForWin)
+  const raspberrySound = document.getElementById("raspberry-sound");
   document.addEventListener('mine', raspberrySound)
   lib.initBoard()
 }
@@ -135,7 +136,7 @@ function checkForWin () {
 }
 
 function raspberrySound () {
-  let audioRaspberry = new Audio('file:///Users/Caz/dev-academy/foundations/minesweeper/raspberry.mp3');
+  let audioRaspberry = new Audio('');
   audioRaspberry.play();
 }
 // Define this function to count the number of mines around the cell
