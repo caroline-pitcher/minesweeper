@@ -21,6 +21,12 @@ var board = {
     isMarked: false,
     hidden: true 
   }, { 
+    row: 0,
+    col: 3,
+    isMine: false,
+    isMarked: false,
+    hidden: true 
+  }, { 
     row: 1,
     col: 0,
     isMine: false,
@@ -39,6 +45,12 @@ var board = {
     isMarked: true,
     hidden: true 
   }, { 
+    row: 1,
+    col: 3,
+    isMine: true,
+    isMarked: true,
+    hidden: true 
+  }, { 
     row: 2,
     col: 0,
     isMine: true,
@@ -53,6 +65,36 @@ var board = {
   }, { 
     row: 2,
     col: 2,
+    isMine: false,
+    isMarked: false,
+    hidden: true 
+  }, { 
+    row: 2,
+    col: 3,
+    isMine: false,
+    isMarked: false,
+    hidden: true 
+  }, { 
+    row: 3,
+    col: 0,
+    isMine: true,
+    isMarked: true,
+    hidden: true 
+  }, { 
+    row: 3,
+    col: 1,
+    isMine: false,
+    isMarked: false,
+    hidden: true 
+  }, { 
+    row: 3,
+    col: 2,
+    isMine: true,
+    isMarked: true,
+    hidden: true 
+  }, { 
+    row: 3,
+    col: 3,
     isMine: false,
     isMarked: false,
     hidden: true 
