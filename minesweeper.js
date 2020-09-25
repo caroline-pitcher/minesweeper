@@ -108,7 +108,6 @@ function startGame () {
   document.addEventListener('click', checkForWin)
   document.addEventListener('contextmenu', checkForWin)
   document.addEventListener('click', raspberrySound)
-  document.addEventListener('contextmenu', raspberrySound)
   lib.initBoard()
 }
 
@@ -137,11 +136,11 @@ function checkForWin () {
 
 function raspberrySound () {
   var audio = document.getElementById('raspberry-sound');
-  audio.play();
-  var remaining = board.cells
-    .filter(function (cell) {
-      return cell.mine
-  })
+  var audio = board.cells
+  .filter(function (cell) {
+    return cell.mine
+})
+  return audio.play();
 }
 
 // Define this function to count the number of mines around the cell
