@@ -6,7 +6,7 @@ var board = {
     row: 0,
     col: 0,
     isMine: true,
-    isMarked: false,
+    isMarked: true,
     hidden: true 
   }, { 
     row: 0,
@@ -30,19 +30,19 @@ var board = {
     row: 1,
     col: 1,
     isMine: true,
-    isMarked: false,
+    isMarked: true,
     hidden: true 
   }, { 
     row: 1,
     col: 2,
     isMine: true,
-    isMarked: false,
+    isMarked: true,
     hidden: true 
   }, { 
     row: 2,
     col: 0,
     isMine: true,
-    isMarked: false,
+    isMarked: true,
     hidden: true 
   }, { 
     row: 2,
@@ -72,6 +72,7 @@ function startGame () {
 //
 // 1. Are all of the cells that are NOT mines visible?
 // 2. Are all of the mines marked?
+
 function checkForWin () {
   var remaining = board.cells
     .filter(function (cell) {
