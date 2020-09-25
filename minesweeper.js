@@ -135,8 +135,8 @@ function checkForWin () {
 }
 
 function raspberrySound () {
-  var audio = document.getElementsByTagName("audio")[0];
-  audio.play();
+  let audioRaspberry = new Audio('./raspberry.wav');
+  audioRaspberry.play();
 }
 // Define this function to count the number of mines around the cell
 // (there could be as many as 8). You don't have to get the surrounding
