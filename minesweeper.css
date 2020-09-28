@@ -45,7 +45,7 @@ body {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/firework.png") mediumblue;
+  background: no-repeat center/60% url("images/firework.png") indigo;
 }
 
 div.hidden {
