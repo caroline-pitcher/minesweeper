@@ -33,7 +33,7 @@ body {
   height: 75px;
   border: 1px #ccc dotted;
   border-radius: 10%;
-  background-color: paleturquoise;
+  background-color: mediumturquoise;
   margin: 3px;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@ div.hidden:hover {
 }
 
 div.marked, div.marked:hover {
-  background: no-repeat center/60% url("images/mark.svg") gold;
+  background: no-repeat center/60% url("images/mark.svg") deepskyblue;
 }
 
 button {
