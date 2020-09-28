@@ -5,7 +5,7 @@ document.addEventListener('contextmenu', checkForWin)
 // Define your `board` object here!
 var board = {cells: []}
 let size = 6
-let difficulty = 0.6
+let difficulty = 0.3
 
 function createBoard () {
   document.querySelector(".board").innerHTML = " "
