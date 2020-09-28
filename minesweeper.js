@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', startGame)
+document.addEventListener('click', checkForWin)
+document.addEventListener('contextmenu', checkForWin)
 
 // Define your `board` object here!
 var board = {cells: []}
 let size = 6
-let difficulty = .4
+let difficulty = 0.6
 
 function createBoard () {
+  document.querySelector(".board").innerHTML = " "
   for (i = 0; i < size; i++) {
     for (j = 0; j < size; j++) {
       board.cells.push({
@@ -29,8 +32,6 @@ function startGame () {
     board.cells[i].surroundingMines = countSurroundingMines(board.cells[i])
   }
   createBoard();
-  document.addEventListener('click', checkForWin)
-  document.addEventListener('contextmenu', checkForWin)
   lib.initBoard()
 }
 
