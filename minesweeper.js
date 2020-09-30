@@ -13,7 +13,8 @@ function createBoard () {
         row: i,
         col: j,
         hidden: true,
-        isMine: Math.random() < difficulty
+        isMine: Math.random() < difficulty,
+        isMarked: isMine
       })
     }
   }
@@ -44,9 +45,9 @@ function checkForWin () {
   for (i = 0; i < board.cells.length; i++) {
   if (board.cells.isMine === true && board.cells.isMarked === true) {
     return lib.displayMessage('yay, you win!')
-    } else if (board.cells.isMine === true && board.cells.isMarked !== true) {
+    } if (board.cells.isMine === true && board.cells.isMarked !== true) {
       return
-    } else if (board.cells.isMine !== true && board.cells.isMarked === true) {
+    } if (board.cells.isMine !== true && board.cells.isMarked === true) {
       return
     }
   }
