@@ -41,15 +41,19 @@ function startGame () {
 // 2. Are all of the mines marked?
 
 function checkForWin () {
-  for (i = 0; i < board.cells.length; i++) {
-  if (board.cells.isMine === true && board.cells.isMarked === true) {
-    return lib.displayMessage('yay, you win!')
-    } else if (board.cells.isMine === true && board.cells.isMarked !== true) {
-      return
-    } else if (board.cells.isMine !== true && board.cells.isMarked === true) {
-      return
+  var isTheWinner = true
+  for (var i = 0; i < board.cells.length; i++) {
+    var cell = board.cells[i]
+    if (cell.isMine && cell.isMarked == false) {
+      isTheWinner = false
+    }
+    if (cell.isMine == false && cell.hidden) {
+      isTheWinner = false
     }
   }
+    if (isTheWinner) {
+      lib.displayMessage('You win!')
+    }
 }
 
 // Define this function to count the number of mines around the cell
